@@ -35,7 +35,7 @@ def log(user, action, extra):
         )
         # send utc date (http://stackoverflow.com/questions/948532/how-do-you-convert-a-javascript-date-to-utc/951417#951417)
         p["event_log"].trigger(action, {
-            "user": user.username,
+            "user": user.username if user else None,
             "extra": extra,
             "date": datetime.utcnow().isoformat()
         })
