@@ -27,17 +27,20 @@ def log(user, action, extra):
         user = None
     
     if PUSHER_CONFIG:
-        import pusher
-        p = pusher.Pusher(
-            app_id=PUSHER_CONFIG["app_id"],
-            key=PUSHER_CONFIG["key"],
-            secret=PUSHER_CONFIG["secret"]
-        )
-        # send utc date (http://stackoverflow.com/questions/948532/how-do-you-convert-a-javascript-date-to-utc/951417#951417)
-        p["event_log"].trigger(action, {
-            "user": user.username if user else None,
-            "extra": extra,
-            "date": datetime.utcnow().isoformat()
-        })
+        try:
+            import pusher
+            p = pusher.Pusher(
+                app_id=PUSHER_CONFIG["app_id"],
+                key=PUSHER_CONFIG["key"],
+                secret=PUSHER_CONFIG["secret"]
+            )
+            # send utc date (http://stackoverflow.com/questions/948532/how-do-you-convert-a-javascript-date-to-utc/951417#951417)
+            p["event_log"].trigger(action, {
+                "user": user.username if user else None,
+                "extra": extra,
+                "date": datetime.utcnow().isoformat()
+            })
+        except Exception, e:
+            Log.objects.create(user=user, action="PUSHER_FAILED", extra={"exception": str(e)})
     
     return Log.objects.create(user=user, action=action, extra=extra)
