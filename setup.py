@@ -132,6 +132,9 @@ setup(
         "Programming Language :: Python",
         "Framework :: Django",
     ],
+    setup_requires=[
+        "django-jsonfield==0.8.5"
+    ],
     zip_safe=False
 )
 

@@ -5,7 +5,7 @@ from django.db import models
 
 from django.contrib.auth.models import User
 
-from jsonfield.fields import JSONField
+import jsonfield
 
 
 PUSHER_CONFIG = getattr(settings, "PUSHER_CONFIG", None)
@@ -16,7 +16,7 @@ class Log(models.Model):
     user = models.ForeignKey(User, null=True)
     timestamp = models.DateTimeField(default=datetime.now)
     action = models.CharField(max_length=50)
-    extra = JSONField(default="{}")
+    extra = jsonfield.JSONField(default="{}")
     
     class Meta:
         ordering = ["-timestamp"]
