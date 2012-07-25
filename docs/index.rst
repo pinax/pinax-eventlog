@@ -20,7 +20,20 @@ a job manager like ``celery`` or ``pyres`` so that the calls become
 asyncronous.
 
 
-Documentation
--------------
+Development
+-----------
 
-Documentation can be found at http://eventlog.rtfd.org/
+The source repository can be found at https://github.com/eldarion/eventlog/
+
+
+Contents
+========
+
+.. toctree::
+ :maxdepth: 1
+
+ changelog
+ installation
+ templatetags
+ usage
+ 
