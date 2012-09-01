@@ -5,7 +5,6 @@ Installation
 
 * To install ::
     
-    pip install django-jsonfield
     pip install eventlog
 
 * Add ``'eventlog'`` to your ``INSTALLED_APPS`` setting::
