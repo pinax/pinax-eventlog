@@ -3,6 +3,12 @@
 ChangeLog
 =========
 
+0.5.3
+-----
+
+- bumped version on django-jsonfield
+
+
 0.5.2
 -----
 
