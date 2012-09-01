@@ -16,7 +16,7 @@ class Log(models.Model):
     user = models.ForeignKey(User, null=True)
     timestamp = models.DateTimeField(default=datetime.now)
     action = models.CharField(max_length=50)
-    extra = jsonfield.JSONField(default="{}")
+    extra = jsonfield.JSONField()
     
     class Meta:
         ordering = ["-timestamp"]
