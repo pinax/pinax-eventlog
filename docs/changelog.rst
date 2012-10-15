@@ -3,6 +3,12 @@
 ChangeLog
 =========
 
+0.5.5
+-----
+
+- use `django.utils.timezone.now` instead of `datetime.datetime.now` for timestamp
+
+
 0.5.4
 -----
 

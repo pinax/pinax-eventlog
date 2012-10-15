@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.conf import settings
 from django.db import models
+from django.utils import timezone
 
 from django.contrib.auth.models import User
 
@@ -14,7 +15,7 @@ PUSHER_CONFIG = getattr(settings, "PUSHER_CONFIG", None)
 class Log(models.Model):
     
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-    timestamp = models.DateTimeField(default=datetime.now)
+    timestamp = models.DateTimeField(default=timezone.now)
     action = models.CharField(max_length=50)
     extra = jsonfield.JSONField()
     
