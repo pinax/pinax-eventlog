@@ -23,9 +23,11 @@ class Log(models.Model):
         ordering = ["-timestamp"]
 
 
-def log(user, action, extra):
+def log(user, action, extra=None):
     if (user is not None and not user.is_authenticated()):
         user = None
+    if extra is None:
+        extra = {}
     
     if PUSHER_CONFIG:
         try:
