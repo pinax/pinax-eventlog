@@ -15,7 +15,7 @@ PUSHER_CONFIG = getattr(settings, "PUSHER_CONFIG", None)
 class Log(models.Model):
     
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-    timestamp = models.DateTimeField(default=timezone.now)
+    timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     action = models.CharField(max_length=50)
     extra = jsonfield.JSONField()
     
