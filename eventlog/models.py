@@ -16,7 +16,7 @@ class Log(models.Model):
     
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
-    action = models.CharField(max_length=50)
+    action = models.CharField(max_length=50, db_index=True)
     extra = jsonfield.JSONField()
     
     class Meta:
