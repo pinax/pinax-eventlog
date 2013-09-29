@@ -3,7 +3,7 @@
 Usage
 =====
 
-Using ``eventlog`` is pretty simple. Throught your site, you just call
+Using ``eventlog`` is pretty simple. Throughout your site, you just call
 a single function, ``log()`` to record whatever information you want to
 log. If you are wanting to log things from third party apps, your best
 bet is to use signals. Hopefully the app in question provides some useful
@@ -13,7 +13,7 @@ enough (e.g. ``pre_save``, ``post_delete``, etc.)
 Example::
 
     from eventlog.models import log
-    
+
     def some_view(request):
         # stuff is done in body of view
         # then at the end before returning the response:
