@@ -8,6 +8,8 @@ from django.contrib.auth.models import User
 
 import jsonfield
 
+from .signals import event_logged
+
 
 PUSHER_CONFIG = getattr(settings, "PUSHER_CONFIG", None)
 
@@ -44,6 +46,11 @@ def log(user, action, extra=None):
                 "date": datetime.utcnow().isoformat()
             })
         except Exception, e:
-            Log.objects.create(user=user, action="PUSHER_FAILED", extra={"exception": str(e)})
+            event_logged.send(
+                sender=Log,
+                event=Log.objects.create(user=user, action="PUSHER_FAILED", extra={"exception": str(e)})
+            )
     
-    return Log.objects.create(user=user, action=action, extra=extra)
+    event = Log.objects.create(user=user, action=action, extra=extra)
+    event_logged.send(sender=Log, event=event)
+    return event

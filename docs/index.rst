@@ -34,6 +34,6 @@ Contents
 
  changelog
  installation
+ signals
  templatetags
  usage
- 
