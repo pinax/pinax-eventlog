@@ -15,12 +15,12 @@ PUSHER_CONFIG = getattr(settings, "PUSHER_CONFIG", None)
 
 
 class Log(models.Model):
-    
+
     user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     action = models.CharField(max_length=50, db_index=True)
     extra = jsonfield.JSONField()
-    
+
     class Meta:
         ordering = ["-timestamp"]
 
@@ -30,7 +30,7 @@ def log(user, action, extra=None):
         user = None
     if extra is None:
         extra = {}
-    
+
     if PUSHER_CONFIG:
         try:
             import pusher
@@ -50,7 +50,7 @@ def log(user, action, extra=None):
                 sender=Log,
                 event=Log.objects.create(user=user, action="PUSHER_FAILED", extra={"exception": str(e)})
             )
-    
+
     event = Log.objects.create(user=user, action=action, extra=extra)
     event_logged.send(sender=Log, event=event)
     return event
