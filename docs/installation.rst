@@ -13,15 +13,3 @@ Installation
         # other apps
         "eventlog",
     )
-
-
-Optionally
-----------
-
-* Configure Pusher::
-
-    PUSHER_CONFIG = {
-        "app_id": "<app_id>",
-        "key": "<key>",
-        "secret": "<secret>"
-    }
