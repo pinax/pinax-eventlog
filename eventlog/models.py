@@ -4,8 +4,6 @@ from django.conf import settings
 from django.db import models
 from django.utils import timezone
 
-from django.contrib.auth.models import User
-
 import jsonfield
 
 from .signals import event_logged
@@ -16,7 +14,11 @@ PUSHER_CONFIG = getattr(settings, "PUSHER_CONFIG", None)
 
 class Log(models.Model):
 
-    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
+    user = models.ForeignKey(
+        getattr(settings, "AUTH_USER_MODEL", "auth.User"),
+        null=True,
+        on_delete=models.SET_NULL
+    )
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     action = models.CharField(max_length=50, db_index=True)
     extra = jsonfield.JSONField()
