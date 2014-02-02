@@ -3,6 +3,20 @@
 ChangeLog
 =========
 
+0.8.0
+-----
+
+- removed non-working templatetag
+- update setup to work with Python 3.3+
+
+
+0.7.0
+-----
+
+- remove pusher integration
+- support for custom user model
+
+
 0.6.7
 -----
 
