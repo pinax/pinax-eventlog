@@ -1,4 +1,5 @@
-import sys, os
+import os
+import sys
 
 extensions = []
 templates_path = []
@@ -12,8 +13,8 @@ pygments_style = 'sphinx'
 html_theme = 'default'
 htmlhelp_basename = '%sdoc' % project
 latex_documents = [
-  ('index', '%s.tex' % project, u'%s Documentation' % project,
-   copyright_holder, 'manual'),
+    ('index', '%s.tex' % project, u'%s Documentation' % project,
+     copyright_holder, 'manual'),
 ]
 man_pages = [
     ('index', project, u'%s Documentation' % project,
