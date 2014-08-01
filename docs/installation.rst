@@ -4,7 +4,7 @@ Installation
 ============
 
 * To install ::
-    
+
     pip install eventlog
 
 * Add ``'eventlog'`` to your ``INSTALLED_APPS`` setting::
