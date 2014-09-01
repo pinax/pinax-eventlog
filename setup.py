@@ -132,7 +132,8 @@ setup(
         "Framework :: Django",
     ],
     install_requires=[
-        "django-jsonfield>=0.8.11"
+        "django-jsonfield>=0.8.11",
+        "djangorestframework==2.4.1",
     ],
     zip_safe=False
 )
