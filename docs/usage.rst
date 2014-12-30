@@ -40,3 +40,13 @@ mind that this is displayed in the admin's list view so if you put too much
 it can take up a lot of space. A good rule of thumb here is put enough
 identifying data to get a sense for what is going on and a key or keys
 that enable you to dig deeper if you want or need to.
+
+
+Mixin
+-----
+
+You can also easily make your class based views auto-logged by using the
+`eventlog.mixins.EventLogMixin`. The only requirement is defining an `action_kind`
+property on the view. But you can also override a number of properties
+to customize what is logged.
+
