@@ -25,7 +25,7 @@ data about activity that occurs in your site.
 Out of the box using this does write to the database.
 
 For small sites, it should be good enough to use inline but you might at some point want to consider wrapping calls to the ``log()`` method and queue them in
-a job manager like ``celery`` or ``pyres`` so that the calls become asyncronous.
+a job manager like ``celery`` or ``pyres`` so that the calls become asynchronous.
 
 
 Documentation
