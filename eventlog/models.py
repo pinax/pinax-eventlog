@@ -18,6 +18,10 @@ class Log(models.Model):
     action = models.CharField(max_length=50, db_index=True)
     extra = jsonfield.JSONField()
 
+    @property
+    def template_fragment_name(self):
+        return "eventlog/{}.html".format(self.action.lower())
+
     class Meta:
         ordering = ["-timestamp"]
 
