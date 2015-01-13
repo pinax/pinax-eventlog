@@ -3,6 +3,19 @@
 ChangeLog
 =========
 
+0.11.0
+------
+
+- added the ability to link content objects you are logging about
+
+
+0.10.0
+------
+
+0.9.0
+-----
+
+
 0.8.0
 -----
 
