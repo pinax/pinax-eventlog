@@ -1,9 +1,10 @@
 from datetime import datetime, timedelta
 
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 
 def used_active(days):
+    User = get_user_model()
     used = User.objects.filter(
         log__timestamp__gt=datetime.now() - timedelta(days=days)
     ).distinct().count()

@@ -1,8 +1,4 @@
-.. _signals:
-
-
-Signals
-=======
+# Signals
 
 There is a signal that you are setup a receiver for to enable you to trigger
 other actions when an event has been logged:
