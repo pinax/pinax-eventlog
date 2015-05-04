@@ -1,5 +1,5 @@
 ========
-eventlog
+pinax-eventlog
 ========
 
 .. image:: https://img.shields.io/travis/pinax/pinax-eventlog.svg
