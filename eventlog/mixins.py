@@ -12,10 +12,7 @@ class EventLogMixin(object):
 
     @property
     def extra_data(self):
-        data = {
-            "pk": self.object.pk
-        }
-        return data
+        return {}
 
     @property
     def user(self):
@@ -27,7 +24,8 @@ class EventLogMixin(object):
         log(
             user=self.user,
             action=self.action,
-            extra=self.extra_data
+            extra=self.extra_data,
+            obj=self.object
         )
 
     def form_valid(self, form):
