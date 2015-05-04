@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 1.0.0
+
+- Eldarion donated to Pinax, renaming from `eventlog` to `pinax-eventlog`
+
+
 ## 0.11.0
 
 - added the ability to link content objects you are logging about
