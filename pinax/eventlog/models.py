@@ -32,7 +32,7 @@ class Log(models.Model):
         ordering = ["-timestamp"]
 
 
-def log(user, action, extra=None, obj=None):
+def log(user, action, extra=None, obj=None, dateof=None):
     if (user is not None and not user.is_authenticated()):
         user = None
     if extra is None:
@@ -42,12 +42,16 @@ def log(user, action, extra=None, obj=None):
     if obj is not None:
         content_type = ContentType.objects.get_for_model(obj)
         object_id = obj.pk
+    if dateof is None:
+        dateof = timezone.now()
+
     event = Log.objects.create(
         user=user,
         action=action,
         extra=extra,
         content_type=content_type,
-        object_id=object_id
+        object_id=object_id,
+        timestamp=dateof
     )
     event_logged.send(sender=Log, event=event)
     return event
