@@ -6,7 +6,6 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 
 import jsonfield
-import datetime
 
 from .signals import event_logged
 
@@ -44,7 +43,7 @@ def log(user, action, extra=None, obj=None, dateof=None):
         content_type = ContentType.objects.get_for_model(obj)
         object_id = obj.pk
     if dateof is None:
-        dateof = datetime.datetime.utcnow()
+        dateof = timezone.now
 
     event = Log.objects.create(
         user=user,
