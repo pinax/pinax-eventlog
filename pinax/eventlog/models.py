@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
+from django.contrib.contenttypes.fields import GenericForeignKey
 
 from django.contrib.contenttypes.models import ContentType
 
@@ -20,6 +21,7 @@ class Log(models.Model):
     action = models.CharField(max_length=50, db_index=True)
     content_type = models.ForeignKey(ContentType, null=True)
     object_id = models.PositiveIntegerField(null=True)
+    obj = GenericForeignKey("content_type", "object_id")
     extra = jsonfield.JSONField()
 
     @property
