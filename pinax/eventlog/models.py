@@ -32,7 +32,7 @@ class Log(models.Model):
         ordering = ["-timestamp"]
 
 
-def log(user, action, extra=None, obj=None):
+def log(user, action, extra=None, obj=None, dateof=None):
     if (user is not None and not user.is_authenticated()):
         user = None
     if extra is None:
@@ -47,7 +47,8 @@ def log(user, action, extra=None, obj=None):
         action=action,
         extra=extra,
         content_type=content_type,
-        object_id=object_id
+        object_id=object_id,
+        timestamp=dateof
     )
     event_logged.send(sender=Log, event=event)
     return event
