@@ -55,7 +55,7 @@ Documentation
 -------------
 
 The `pinax-eventlog` documentation can be found at http://pinax-eventlog.rtfd.org/.
-The Pinax documentation is available at http://pinaxproject.com/pinax/.
+The Pinax documentation is available at http://pinaxproject.com/pinax/. If you would like to help us improve our documentation or write more documentation, please join our Pinax Project Slack channel and let us know!
 
 
 Code of Conduct
