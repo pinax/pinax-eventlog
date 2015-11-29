@@ -26,7 +26,7 @@ class Log(models.Model):
 
     @property
     def template_fragment_name(self):
-        return "eventlog/{}.html".format(self.action.lower())
+        return "pinax/eventlog/{}.html".format(self.action.lower())
 
     class Meta:
         ordering = ["-timestamp"]
