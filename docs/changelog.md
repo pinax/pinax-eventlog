@@ -1,5 +1,14 @@
 # ChangeLog
 
+## 1.1.0
+
+- Started testing against Django master
+- Switched to `jsonfield` from `django-jsonfield`
+- Added ability to link a log to any object via a GFK
+- Added ability to override timestamp
+- Fixed template fragment path
+
+
 ## 1.0.0
 
 - Eldarion donated to Pinax, renaming from `eventlog` to `pinax-eventlog`
