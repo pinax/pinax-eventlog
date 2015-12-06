@@ -22,7 +22,7 @@ setup(
     packages=find_packages(),
     test_suite="runtests.runtests",
     install_requires=[
-        "django-jsonfield>=0.9.13"
+        "jsonfield>=1.0.3"
     ],
     tests_require=[
     ],
