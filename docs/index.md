@@ -33,3 +33,8 @@ Add `pinax.eventlog` to your `INSTALLED_APPS` setting:
         # other apps
         "pinax.eventlog",
     )
+
+Run the app's migrations:
+
+    python manage.py migrate eventlog
+    
