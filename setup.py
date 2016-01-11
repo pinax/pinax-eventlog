@@ -16,7 +16,7 @@ setup(
     description="an event logger for Django projects",
     name="pinax-eventlog",
     long_description=read("README.rst"),
-    version="1.1.0",
+    version="1.1.1",
     url="http://pinax-eventlog.rtfd.org/",
     license="MIT",
     packages=find_packages(),
