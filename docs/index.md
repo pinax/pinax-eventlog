@@ -3,7 +3,7 @@
 !!! note "Pinax Ecosystem"
     This app was developed as part of the Pinax ecosystem but is just a Django app
     and can be used independently of other Pinax apps.
-    
+
     To learn more about Pinax, see <http://pinaxproject.com/>
 
 `pinax-eventlog`, formerly named `eventlog` is a simple app that provides an
@@ -13,7 +13,7 @@ intelligence data about activity that occurs in your site.
 Out of the box using this does write to the database. For small sites,
 it should be good enough to use inline but you might at some point want to
 consider wrapping calls to the `log()` method and queue them in a job manager
-like `celery` or `pyres` so that the calls become asyncronous.
+like `celery` or `pyres` so that the calls become asynchronous.
 
 
 ## Development
@@ -37,4 +37,3 @@ Add `pinax.eventlog` to your `INSTALLED_APPS` setting:
 Run the app's migrations:
 
     python manage.py migrate eventlog
-    
