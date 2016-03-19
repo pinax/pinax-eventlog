@@ -1,9 +1,6 @@
-try:
-    from django.conf.urls import patterns, include
-except ImportError:
-    from django.conf.urls.defaults import patterns, include  # noqa
+from django.conf.urls import include
 
 
-urlpatterns = patterns(
-    ""
-)
+urlpatterns = [
+
+]

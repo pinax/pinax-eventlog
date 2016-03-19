@@ -1,3 +1,5 @@
 include AUTHORS
 include LICENSE
 include README.rst
+recursive-include pinax/eventlog/static *
+recursive-include pinax/eventlog/templates *
