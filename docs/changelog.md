@@ -1,5 +1,12 @@
 # ChangeLog
 
+## 1.1.2
+
+- Fix spelling error in documentation
+- Added wheel release
+- Dropped 3.2 support
+
+
 ## 1.1.1
 
  - Added missing migration from the switch to jsonfield
