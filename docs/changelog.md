@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 1.1.1
+
+ - Added missing migration from the switch to jsonfield
+
+
 ## 1.1.0
 
 - Started testing against Django master
