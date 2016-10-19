@@ -32,7 +32,7 @@ naming conventions in your site so that the admin interface makes sense
 when you have 50,000 log records you want to filter down and analyze.
 
 The `extra` parameter can be anything that will serialize to JSON. Results
-become easier to manager if you keep it at a single level. Also, keep in
+become easier to manage if you keep it at a single level. Also, keep in
 mind that this is displayed in the admin's list view so if you put too much
 it can take up a lot of space. A good rule of thumb here is put enough
 identifying data to get a sense for what is going on and a key or keys
