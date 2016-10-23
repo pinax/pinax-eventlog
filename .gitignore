@@ -2,6 +2,7 @@ build
 dist
 .coverage
 .tox
+.idea
 MANIFEST
 *.pyc
 *.egg-info

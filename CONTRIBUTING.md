@@ -1,6 +1,6 @@
 # How to Contribute
 
-There are many ways you can help contribute to this project. Contributing
+There are many ways you can help contribute to pinax-eventlog. Contributing
 code, writing documentation, reporting bugs, as well as reading and providing
 feedback on issues and pull requests, all are valid and necessary ways to
 help.
@@ -54,7 +54,7 @@ if appropriate.
 
 ## Coding style
 
-When writing code to be included in django-user-accounts keep our style in mind:
+When writing code to be included in pinax-eventlog keep our style in mind:
 
 * Follow [PEP8](http://www.python.org/dev/peps/pep-0008/) there are some
   cases where we do not follow PEP8. It is an excellent starting point.
