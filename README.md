@@ -1,8 +1,8 @@
 # Pinax Eventlog
 
 [![](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
-[![](https://img.shields.io/travis/pinax/pinax-eventlog.svg)](https://travis-ci.org/pinax/pinax-eventlog/)
-[![](https://img.shields.io/coveralls/pinax/pinax-eventlog.svg)](https://coveralls.io/r/pinax/pinax-eventlog/)
+[![CircleCi](https://img.shields.io/circleci/project/github/pinax/pinax-eventlog.svg)](https://circleci.com/gh/pinax/pinax-eventlog/)
+[![Codecov](https://img.shields.io/codecov/c/github/pinax/pinax-eventlog.svg)](https://codecov.io/gh/pinax/pinax-eventlog/)
 [![](https://img.shields.io/pypi/dm/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
 [![](https://img.shields.io/pypi/v/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
