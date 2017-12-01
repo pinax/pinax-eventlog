@@ -1,23 +1,12 @@
 # Pinax Eventlog
 
-.. image:: http://slack.pinaxproject.com/badge.svg
-   :target: http://slack.pinaxproject.com/
+[![](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
+[![](https://img.shields.io/travis/pinax/pinax-eventlog.svg)](https://travis-ci.org/pinax/pinax-eventlog/)
+[![](https://img.shields.io/coveralls/pinax/pinax-eventlog.svg)](https://coveralls.io/r/pinax/pinax-eventlog/)
+[![](https://img.shields.io/pypi/dm/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
+[![](https://img.shields.io/pypi/v/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
+[![](https://img.shields.io/badge/license-MIT-blue.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
 
-.. image:: https://img.shields.io/travis/pinax/pinax-eventlog.svg
-    :target: https://travis-ci.org/pinax/pinax-eventlog
-
-.. image:: https://img.shields.io/coveralls/pinax/pinax-eventlog.svg
-    :target: https://coveralls.io/r/pinax/pinax-eventlog
-
-.. image:: https://img.shields.io/pypi/dm/pinax-eventlog.svg
-    :target:  https://pypi.python.org/pypi/pinax-eventlog/
-
-.. image:: https://img.shields.io/pypi/v/pinax-eventlog.svg
-    :target:  https://pypi.python.org/pypi/pinax-eventlog/
-
-.. image:: https://img.shields.io/badge/license-MIT-blue.svg
-    :target:  https://pypi.python.org/pypi/pinax-eventlog/
-    
 ## Pinax
 
 Pinax is an open-source platform built on the Django Web Framework. It is an ecosystem of reusable Django apps, themes, and starter project templates. 
