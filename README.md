@@ -27,6 +27,12 @@ point want to consider wrapping calls to the ``log()`` method and queue them in
 a job manager like ``celery`` or ``pyres`` so that the calls become asynchronous.
 
 
+### Supported Django and Python Versions
+
+* Django 1.8, 1.10, 1.11, and 2.0
+* Python 2.7, 3.4, 3.5, and 3.6
+
+
 ## Table of Contents
 
 * [Quickstart](#quickstart)
