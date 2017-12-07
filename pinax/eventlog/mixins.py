@@ -16,7 +16,7 @@ class EventLogMixin(object):
 
     @property
     def user(self):
-        if self.request.user.is_authenticated():
+        if self.request.user.is_authenticated:
             return self.request.user
         return None
 

@@ -27,7 +27,7 @@ DEFAULT_SETTINGS = dict(
 )
 
 
-def runtests(*test_args):
+def run(*args):
     if not settings.configured:
         settings.configure(**DEFAULT_SETTINGS)
 
@@ -36,11 +36,12 @@ def runtests(*test_args):
     parent = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, parent)
 
-    from django.test.runner import DiscoverRunner
-    test_args = ["pinax.eventlog.tests"]
-    failures = DiscoverRunner(verbosity=1, interactive=True, failfast=False).run_tests(test_args)
-    sys.exit(failures)
+    django.core.management.call_command(
+        "makemigrations",
+        "eventlog",
+        *args
+    )
 
 
 if __name__ == "__main__":
-    runtests(*sys.argv[1:])
+    run(*sys.argv[1:])
