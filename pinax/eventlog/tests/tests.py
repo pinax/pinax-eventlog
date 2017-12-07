@@ -1,16 +1,15 @@
 from datetime import timedelta
 
-from django.test import TestCase
-from django.utils import timezone
-
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AnonymousUser
 from django.contrib.contenttypes.models import ContentType
+from django.test import TestCase
+from django.utils import timezone
 
 from ..mixins import EventLogMixin
-from ..models import log, Log
+from ..models import Log, log
 from ..signals import event_logged
-from ..stats import used_active, stats
+from ..stats import stats, used_active
 
 
 class TestStats(TestCase):
