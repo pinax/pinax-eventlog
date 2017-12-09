@@ -1,5 +1,10 @@
 # ChangeLog
 
+## 2.0.0
+
+- Removed Django v1.9, 1.10 support
+- Added CircleCi config, removed Travis config
+
 ## 1.1.2
 
 - Fix spelling error in documentation
