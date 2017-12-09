@@ -45,10 +45,12 @@ a job manager like ``celery`` or ``pyres`` so that the calls become asynchronous
 
 This project was originally named ``eventlog`` and was created by the team at Eldarion. It was later donated to Pinax and at that time renamed to ``pinax-eventlog``.
 
-### Supported Django and Python Versions
+#### Supported Django and Python versions
 
-* Django 1.8, 1.10, 1.11, and 2.0
-* Python 2.7, 3.4, 3.5, and 3.6
+Django \ Python | 2.7 | 3.4 | 3.5 | 3.6
+--------------- | --- | --- | --- | ---
+1.11 |  *  |  *  |  *  |  *  
+2.0  |     |  *  |  *  |  *
 
 
 ## Documentation
@@ -127,7 +129,7 @@ was just logged.
 ### 2.0.0
 
 * Add Django 2.0 compatibility testing
-* Drop Django 1.9 and Python 3.3 support
+* Drop Django 1.8, 1.9, 1.10 and Python 3.3 support
 * Convert CI and coverage to CircleCi and CodeCov
 * Add PyPi-compatible long description
 * Move documentation to README.md
