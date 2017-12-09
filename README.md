@@ -13,6 +13,7 @@
 * [About Pinax](#about-pinax)
 * [Overview](#overview)
   * [Features](#features)
+  * [History](#history)
   * [Supported Django and Python versions](#supported-django-and-python-versions)
 * [Documentation](#documentation)
   * [Usage](#usage)
@@ -30,6 +31,8 @@ Pinax is an open-source platform built on the Django Web Framework. It is an eco
 
 
 ## pinax-eventlog
+
+### Overview
 
 ``pinax-eventlog`` is a simple app that provides an easy and clean interface for logging diagnostic as well as business intelligence data about activity that occurs in your site.
 
@@ -119,7 +122,7 @@ other actions when an event has been logged:
 was just logged.
 
 
-## ChangeLog
+## Change Log
 
 ### 2.0.0
 
