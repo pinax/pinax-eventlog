@@ -125,6 +125,10 @@ was just logged.
 
 ## Change Log
 
+### 2.0.1
+
+* Standardize and improve documentation
+
 ### 2.0.0
 
 * Add Django 2.0 compatibility testing
