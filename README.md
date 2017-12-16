@@ -33,16 +33,16 @@ Pinax is an open-source platform built on the Django Web Framework. It is an eco
 
 ### Overview
 
-``pinax-eventlog`` is a simple app that provides an easy and clean interface for logging diagnostic as well as business intelligence data about activity that occurs in your site.
+`pinax-eventlog` is a simple app that provides an easy and clean interface for logging diagnostic as well as business intelligence data about activity that occurs in your site.
 
 Out of the box using this does write to the database.
 
-For small sites, it should be good enough to use inline but you might at some point want to consider wrapping calls to the ``log()`` method and queue them in
-a job manager like ``celery`` or ``pyres`` so that the calls become asynchronous.
+For small sites, it should be good enough to use inline but you might at some point want to consider wrapping calls to the `log()` method and queue them in
+a job manager like `celery` or `pyres` so that the calls become asynchronous.
 
 #### History
 
-This project was originally named ``eventlog`` and was created by the team at Eldarion. It was later donated to Pinax and at that time renamed to ``pinax-eventlog``.
+This project was originally named `eventlog` and was created by the team at [Eldarion](http://eldarion.com). It was later donated to Pinax and at that time renamed to `pinax-eventlog`.
 
 #### Supported Django and Python versions
 
@@ -60,10 +60,12 @@ Install the package:
 
 Add `pinax.eventlog` to your `INSTALLED_APPS` setting:
 
+```python
     INSTALLED_APPS = (
         # other apps
         "pinax.eventlog",
     )
+```
 
 Run the app's migrations:
 
@@ -76,21 +78,22 @@ Using `pinax-eventlog` is pretty simple. Throughout your site, you just call a s
 
 Example:
 
-    from pinax.eventlog.models import log
+```python
+from pinax.eventlog.models import log
 
-    def some_view(request):
-        # stuff is done in body of view
-        # then at the end before returning the response:
-        log(
-            user=request.user,
-            action="CREATED_FOO_WIDGET",
-            obj=foo,
-            extra={
-                "title": foo.title
-            }
-        )
-        return HttpResponse()
-
+def some_view(request):
+    # stuff is done in body of view
+    # then at the end before returning the response:
+    log(
+        user=request.user,
+        action="CREATED_FOO_WIDGET",
+        obj=foo,
+        extra={
+            "title": foo.title
+        }
+    )
+    return HttpResponse()
+```
 
 The `action` parameter can be any string you choose. By convention, we
 always use all caps. Take note, however, whatever you choose, will be the
