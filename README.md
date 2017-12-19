@@ -1,5 +1,7 @@
 # Pinax Eventlog
 
+[![](https://img.shields.io/pypi/v/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
+
 [![CircleCi](https://img.shields.io/circleci/project/github/pinax/pinax-eventlog.svg)](https://circleci.com/gh/pinax/pinax-eventlog/)
 [![Codecov](https://img.shields.io/codecov/c/github/pinax/pinax-eventlog.svg)](https://codecov.io/gh/pinax/pinax-eventlog/)
 [![](https://img.shields.io/github/contributors/pinax/pinax-eventlog.svg)](https://github.com/pinax/pinax-eventlog/graphs/contributors)
