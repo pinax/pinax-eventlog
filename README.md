@@ -2,8 +2,9 @@
 
 [![CircleCi](https://img.shields.io/circleci/project/github/pinax/pinax-eventlog.svg)](https://circleci.com/gh/pinax/pinax-eventlog/)
 [![Codecov](https://img.shields.io/codecov/c/github/pinax/pinax-eventlog.svg)](https://codecov.io/gh/pinax/pinax-eventlog/)
-[![](https://img.shields.io/pypi/dm/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
-[![](https://img.shields.io/pypi/v/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
+[![](https://img.shields.io/github/contributors/pinax/pinax-eventlog.svg)](https://github.com/pinax/pinax-eventlog/graphs/contributors)
+[![](https://img.shields.io/github/issues-pr/pinax/pinax-eventlog.svg)](https://github.com/pinax/pinax-eventlog/pulls)
+[![](https://img.shields.io/github/issues-pr-closed/pinax/pinax-eventlog.svg)](https://github.com/pinax/pinax-eventlog/pulls?q=is%3Apr+is%3Aclosed)
 
 [![](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
