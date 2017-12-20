@@ -1,18 +1,18 @@
 from setuptools import find_packages, setup
 
-VERSION = "2.0.1"
+VERSION = "2.0.2"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
 
-===================
-Pinax Announcements
-===================
+==============
+Pinax EventLog
+==============
 
 .. image:: https://img.shields.io/pypi/v/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
-.. image:: https://img.shields.io/badge/license-MIT-blue.svg
-    :target: https://pypi.python.org/pypi/pinax-eventlog/
+
+\ 
 
 .. image:: https://img.shields.io/circleci/project/github/pinax/pinax-eventlog.svg
     :target: https://circleci.com/gh/pinax/pinax-eventlog
@@ -25,22 +25,24 @@ Pinax Announcements
 .. image:: https://img.shields.io/github/issues-pr-closed/pinax/pinax-eventlog.svg
     :target: https://github.com/pinax/pinax-eventlog/pulls?q=is%3Apr+is%3Aclosed
 
+\ 
+
 .. image:: http://slack.pinaxproject.com/badge.svg
     :target: http://slack.pinaxproject.com/
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://pypi.python.org/pypi/pinax-eventlog/
+
+\ 
 
 ``pinax-eventlog`` provides an easy and clean interface for logging diagnostic
 as well as business intelligence data about activity that occurs in your site.
 
-Out of the box using this does write to the database. For small sites,
-it should be good enough to use inline but you might at some point want to
-consider wrapping calls to the `log()` method and queue them in a job manager
-like ``celery`` or ``pyres`` so that the calls become asynchronous.
 
 Supported Django and Python Versions
 ------------------------------------
 
 +-----------------+-----+-----+-----+-----+
-| Django \ Python | 2.7 | 3.4 | 3.5 | 3.6 |
+| Django / Python | 2.7 | 3.4 | 3.5 | 3.6 |
 +=================+=====+=====+=====+=====+
 | 1.11            |  *  |  *  |  *  |  *  |
 +-----------------+-----+-----+-----+-----+

@@ -38,9 +38,9 @@ Pinax is an open-source platform built on the Django Web Framework. It is an eco
 
 `pinax-eventlog` is a simple app that provides an easy and clean interface for logging diagnostic as well as business intelligence data about activity that occurs in your site.
 
-Out of the box using this does write to the database.
+By default this app writes directly to the database.
 
-For small sites, it should be good enough to use inline but you might at some point want to consider wrapping calls to the `log()` method and queue them in
+For small sites, it should be good enough to use inline but you might want to consider wrapping calls to the `log()` method and queue them in
 a job manager like `celery` or `pyres` so that the calls become asynchronous.
 
 #### History
@@ -130,6 +130,10 @@ was just logged.
 
 
 ## Change Log
+
+### 2.0.2
+
+* fix setup.py LONG_DESCRIPTION for PyPi
 
 ### 2.0.1
 
