@@ -1,3 +1,5 @@
+![](http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg)
+
 # Pinax Eventlog
 
 [![](https://img.shields.io/pypi/v/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
