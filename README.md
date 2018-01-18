@@ -13,16 +13,17 @@
 [![](http://slack.pinaxproject.com/badge.svg)](http://slack.pinaxproject.com/)
 [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+
 ## Table of Contents
 
 * [About Pinax](#about-pinax)
 * [Overview](#overview)
-  * [History](#history)
   * [Supported Django and Python versions](#supported-django-and-python-versions)
 * [Documentation](#documentation)
   * [Usage](#usage)
   * [Signals](#signals)
 * [Change Log](#change-log)
+* [History](#history)
 * [Contribute](#contribute)
 * [Code of Conduct](#code-of-conduct)
 * [Connect with Pinax](#connect-with-pinax)
@@ -45,10 +46,6 @@ By default this app writes directly to the database.
 For small sites, it should be good enough to use inline but you might want to consider wrapping calls to the `log()` method and queue them in
 a job manager like `celery` or `pyres` so that the calls become asynchronous.
 
-#### History
-
-This project was originally named `eventlog` and was created by the team at [Eldarion](http://eldarion.com). It was later donated to Pinax and at that time renamed to `pinax-eventlog`.
-
 #### Supported Django and Python versions
 
 Django \ Python | 2.7 | 3.4 | 3.5 | 3.6
@@ -61,7 +58,9 @@ Django \ Python | 2.7 | 3.4 | 3.5 | 3.6
 
 Install the package:
 
-    pip install pinax-eventlog
+```shell
+    $ pip install pinax-eventlog
+```
 
 Add `pinax.eventlog` to your `INSTALLED_APPS` setting:
 
@@ -74,8 +73,9 @@ Add `pinax.eventlog` to your `INSTALLED_APPS` setting:
 
 Run the app's migrations:
 
-    python manage.py migrate eventlog
-
+```shell
+    $ python manage.py migrate eventlog
+```
 
 ## Usage
 
@@ -113,14 +113,12 @@ it can take up a lot of space. A good rule of thumb here is put enough
 identifying data to get a sense for what is going on and a key or keys
 that enable you to dig deeper if you want or need to.
 
-
 ### Mixin
 
 You can also easily make your class based views auto-logged by using the
 `pinax.eventlog.mixins.EventLogMixin`. The only requirement is defining an
 `action_kind` property on the view. But you can also override a number of
 properties to customize what is logged.
-
 
 ## Signals
 
@@ -155,11 +153,9 @@ was just logged.
 * Added wheel release
 * Dropped 3.2 support
 
-
 ### 1.1.1
 
 * Added missing migration from the switch to jsonfield
-
 
 ### 1.1.0
 
@@ -169,44 +165,36 @@ was just logged.
 * Added ability to override timestamp
 * Fixed template fragment path
 
-
 ### 1.0.0
 
 * Eldarion donated to Pinax, renaming from `eventlog` to `pinax-eventlog`
-
 
 ### 0.11.0
 
 * added the ability to link content objects you are logging about
 
-
 ### 0.10.0
 
 * added property to provide template fragment name
 
-
 ### 0.9.0
 
 * Add mixin for making it easy to audit CBV
-
 
 ### 0.8.0
 
 * removed non-working templatetag
 * update setup to work with Python 3.3+
 
-
 ### 0.7.0
 
 * remove pusher integration
 * support for custom user model
 
-
 ### 0.6.7
 
 * added the `event_logged` signal
 * corrected typo in usage documentation
-
 
 ### 0.6.6
 
@@ -216,36 +204,29 @@ was just logged.
 
 * attempts at fixing admin performance
 
-
 ### 0.6.4
 
 * attempts at fixing admin performance with an index on action
-
 
 ### 0.6.3
 
 * attempts at fixing admin performance with an index on timestamp
 
-
 ### 0.6.2
 
 * update setup.py to use install_requires instead of setup_requires
-
 
 ### 0.6.1
 
 * made the extra argument optional
 
-
 ### 0.6.0
 
 * improve the admin
 
-
 ### 0.5.5
 
 * use `django.utils.timezone.now` instead of `datetime.datetime.now` for timestamp
-
 
 ### 0.5.4
 
@@ -255,15 +236,18 @@ was just logged.
 
 * bumped version on django-jsonfield
 
-
 ### 0.5.2
 
 * added docs
 
-
 ### 0.5.1
 
 * initial release
+
+
+#### History
+
+This project was originally named `eventlog` and was created by the team at [Eldarion](http://eldarion.com). It was later donated to Pinax and at that time renamed to `pinax-eventlog`.
 
 
 ## Contribute
@@ -278,6 +262,7 @@ and ping us there instead of creating an issue on GitHub. Creating issues on Git
 also valid but we are usually able to help you faster if you ping us in Slack.
 
 We also highly recommend reading our blog post on [Open Source and Self-Care](http://blog.pinaxproject.com/2016/01/19/open-source-and-self-care/).
+
 
 ## Code of Conduct
 
