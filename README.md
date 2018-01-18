@@ -245,7 +245,7 @@ was just logged.
 * initial release
 
 
-#### History
+## History
 
 This project was originally named `eventlog` and was created by the team at [Eldarion](http://eldarion.com). It was later donated to Pinax and at that time renamed to `pinax-eventlog`.
 
