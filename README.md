@@ -20,6 +20,7 @@
 * [Overview](#overview)
   * [Supported Django and Python versions](#supported-django-and-python-versions)
 * [Documentation](#documentation)
+  * [Installation](#installation)
   * [Usage](#usage)
   * [Signals](#signals)
 * [Change Log](#change-log)
@@ -56,6 +57,8 @@ Django \ Python | 2.7 | 3.4 | 3.5 | 3.6
 
 ## Documentation
 
+### Installation
+
 Install the package:
 
 ```shell
@@ -77,7 +80,7 @@ Run the app's migrations:
     $ python manage.py migrate eventlog
 ```
 
-## Usage
+### Usage
 
 Using `pinax-eventlog` is pretty simple. Throughout your site, you just call a single function, `log()` to record whatever information you want to log. If you are wanting to log things from third party apps, your best bet is to use signals. Hopefully the app in question provides some useful signals, but if not, perhaps some of the built in model signals will be enough (e.g. `pre_save`, `post_delete`, etc.)
 
@@ -113,14 +116,14 @@ it can take up a lot of space. A good rule of thumb here is put enough
 identifying data to get a sense for what is going on and a key or keys
 that enable you to dig deeper if you want or need to.
 
-### Mixin
+#### Mixin
 
 You can also easily make your class based views auto-logged by using the
 `pinax.eventlog.mixins.EventLogMixin`. The only requirement is defining an
 `action_kind` property on the view. But you can also override a number of
 properties to customize what is logged.
 
-## Signals
+### Signals
 
 There is a signal that you are setup a receiver for to enable you to trigger
 other actions when an event has been logged:
