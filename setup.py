@@ -37,7 +37,6 @@ Pinax EventLog
 ``pinax-eventlog`` provides an easy and clean interface for logging diagnostic
 as well as business intelligence data about activity that occurs in your site.
 
-
 Supported Django and Python Versions
 ------------------------------------
 
