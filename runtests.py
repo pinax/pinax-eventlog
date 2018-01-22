@@ -36,9 +36,16 @@ def runtests(*test_args):
     parent = os.path.dirname(os.path.abspath(__file__))
     sys.path.insert(0, parent)
 
-    from django.test.runner import DiscoverRunner
-    test_args = ["pinax.eventlog.tests"]
-    failures = DiscoverRunner(verbosity=1, interactive=True, failfast=False).run_tests(test_args)
+    try:
+        from django.test.runner import DiscoverRunner
+        runner_class = DiscoverRunner
+        test_args = ["pinax.eventlog.tests"]
+    except ImportError:
+        from django.test.simple import DjangoTestSuiteRunner
+        runner_class = DjangoTestSuiteRunner
+        test_args = ["tests"]
+
+    failures = runner_class(verbosity=1, interactive=True, failfast=False).run_tests(test_args)
     sys.exit(failures)
 
 
