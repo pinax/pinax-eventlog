@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "2.0.2"
+VERSION = "2.0.3"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
@@ -82,7 +82,7 @@ setup(
     ],
     install_requires=[
         "django>=1.11",
-        "jsonfield>=1.0.3"
+        "jsonfield>=2.0.2"
     ],
     tests_require=[
     ],

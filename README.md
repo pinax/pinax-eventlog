@@ -134,6 +134,13 @@ was just logged.
 
 ## Change Log
 
+### 2.0.3
+
+* Use SET_NULL so Log instances are not deleted
+* Update runtests.py
+* Update CI configuration
+* Update jsonfield requirement
+
 ### 2.0.2
 
 * fix setup.py LONG_DESCRIPTION for PyPi
