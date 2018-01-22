@@ -136,7 +136,7 @@ was just logged.
 
 ### 2.0.3
 
-* Use SET_NULL so Log instances are not deleted
+* Use SET_NULL so Log instances are not deleted when related object is deleted
 * Update runtests.py
 * Update CI configuration
 * Update jsonfield requirement
