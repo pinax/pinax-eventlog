@@ -59,7 +59,7 @@ Django \ Python | 2.7 | 3.4 | 3.5 | 3.6
 
 ### Installation
 
-Install the package:
+To install pinax-eventlog:
 
 ```shell
     $ pip install pinax-eventlog
@@ -68,10 +68,10 @@ Install the package:
 Add `pinax.eventlog` to your `INSTALLED_APPS` setting:
 
 ```python
-    INSTALLED_APPS = (
+    INSTALLED_APPS = [
         # other apps
         "pinax.eventlog",
-    )
+    ]
 ```
 
 Run the app's migrations:
