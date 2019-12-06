@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "2.0.3"
+VERSION = "3.0.0"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
@@ -12,7 +12,7 @@ Pinax EventLog
 .. image:: https://img.shields.io/pypi/v/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
 
-\ 
+\
 
 .. image:: https://img.shields.io/circleci/project/github/pinax/pinax-eventlog.svg
     :target: https://circleci.com/gh/pinax/pinax-eventlog
@@ -25,14 +25,14 @@ Pinax EventLog
 .. image:: https://img.shields.io/github/issues-pr-closed/pinax/pinax-eventlog.svg
     :target: https://github.com/pinax/pinax-eventlog/pulls?q=is%3Apr+is%3Aclosed
 
-\ 
+\
 
 .. image:: http://slack.pinaxproject.com/badge.svg
     :target: http://slack.pinaxproject.com/
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :target: https://opensource.org/licenses/MIT/
 
-\ 
+\
 
 ``pinax-eventlog`` provides an easy and clean interface for logging diagnostic
 as well as business intelligence data about activity that occurs in your site.
@@ -40,13 +40,13 @@ as well as business intelligence data about activity that occurs in your site.
 Supported Django and Python Versions
 ------------------------------------
 
-+-----------------+-----+-----+-----+-----+
-| Django / Python | 2.7 | 3.4 | 3.5 | 3.6 |
-+=================+=====+=====+=====+=====+
-| 1.11            |  *  |  *  |  *  |  *  |
-+-----------------+-----+-----+-----+-----+
-| 2.0             |     |  *  |  *  |  *  |
-+-----------------+-----+-----+-----+-----+
++-----------------+-----+-----+-----+
+| Django / Python | 3.4 | 3.5 | 3.6 |
++=================+=====+=====+=====+
+| 2.2             |  *  |  *  |  *  |
++-----------------+-----+-----+-----+
+| 3.0             |  *  |  *  |  *  |
++-----------------+-----+-----+-----|
 """
 
 setup(
@@ -66,14 +66,12 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Django",
-        'Framework :: Django :: 1.11',
-        'Framework :: Django :: 2.0',
+        'Framework :: Django :: 2.2',
+        'Framework :: Django :: 3.0',
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
@@ -81,8 +79,8 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=[
-        "django>=1.11",
-        "jsonfield>=2.0.2"
+        "django>=2.2",
+        "psycopg2-binary>=2.8.4"
     ],
     tests_require=[
     ],

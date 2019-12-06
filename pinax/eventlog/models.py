@@ -1,10 +1,9 @@
 from django.conf import settings
+from django.contrib.postgres.fields import JSONField
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils import timezone
-
-import jsonfield
 
 from .signals import event_logged
 
@@ -21,7 +20,7 @@ class Log(models.Model):
     content_type = models.ForeignKey(ContentType, null=True, on_delete=models.SET_NULL)
     object_id = models.PositiveIntegerField(null=True)
     obj = GenericForeignKey("content_type", "object_id")
-    extra = jsonfield.JSONField()
+    extra = JSONField()
 
     @property
     def template_fragment_name(self):
