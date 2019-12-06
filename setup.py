@@ -37,16 +37,6 @@ Pinax EventLog
 ``pinax-eventlog`` provides an easy and clean interface for logging diagnostic
 as well as business intelligence data about activity that occurs in your site.
 
-Supported Django and Python Versions
-------------------------------------
-
-+-----------------+-----+-----+-----+
-| Django / Python | 3.4 | 3.5 | 3.6 |
-+=================+=====+=====+=====+
-| 2.2             |  *  |  *  |  *  |
-+-----------------+-----+-----+-----+
-| 3.0             |  *  |  *  |  *  |
-+-----------------+-----+-----+-----|
 """
 
 setup(
@@ -55,6 +45,7 @@ setup(
     description="an event logger for Django projects",
     name="pinax-eventlog",
     long_description=LONG_DESCRIPTION,
+    long_description_content_type="text/x-rst",
     version=VERSION,
     url="http://github.com/pinax/pinax-eventlog/",
     license="MIT",
