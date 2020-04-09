@@ -5,10 +5,7 @@ class EventLogMixin:
 
     @property
     def action(self):
-        return "{}_{}".format(
-            self.action_kind,
-            self.model._meta.verbose_name.upper().replace(" ", "_")
-        )
+        return f"{self.action_kind}_{self.model._meta.verbose_name.upper().replace(' ', '_')}"
 
     @property
     def extra_data(self):
