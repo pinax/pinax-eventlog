@@ -1,11 +1,15 @@
 from django.conf import settings
-from django.contrib.postgres.fields import JSONField
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
 from django.utils import timezone
 
 from .signals import event_logged
+
+if "sqlite" in settings.DATABASES["default"]["ENGINE"]:
+    from .fields import JSONField
+else:
+    from django.contrib.postgres.fields import JSONField
 
 
 class Log(models.Model):
