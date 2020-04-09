@@ -1,7 +1,7 @@
 from .models import log
 
 
-class EventLogMixin(object):
+class EventLogMixin:
 
     @property
     def action(self):
