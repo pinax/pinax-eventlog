@@ -29,6 +29,6 @@ class EventLogMixin:
         )
 
     def form_valid(self, form):
-        response = super(EventLogMixin, self).form_valid(form)
+        response = super().form_valid(form)
         self.log_action()
         return response
