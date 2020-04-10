@@ -17,6 +17,7 @@
 ## Table of Contents
 
 * [About Pinax](#about-pinax)
+* [Important Links](#important-links)
 * [Overview](#overview)
   * [Supported Django and Python Versions](#supported-django-and-python-versions)
 * [Documentation](#documentation)
@@ -36,6 +37,17 @@
 Pinax is an open-source platform built on the Django Web Framework. It is an ecosystem of reusable Django apps, themes, and starter project templates. This collection can be found at http://pinaxproject.com.
 
 
+## Important Links
+
+Where you can find what you need:
+* Releases: published to [PyPI](https://pypi.org/search/?q=pinax) or tagged in app repos in the [Pinax GitHub organization](https://github.com/pinax/)
+* Global documentation: [Pinax documentation website](https://pinaxproject.com/pinax/)
+* App specific documentation: app repos in the [Pinax GitHub organization](https://github.com/pinax/)
+* Support information: [SUPPORT.md](https://github.com/pinax/.github/blob/master/SUPPORT.md) file in the [Pinax default community health file repo](https://github.com/pinax/.github/)
+* Contributing information: [CONTRIBUTING.md](https://github.com/pinax/.github/blob/master/CONTRIBUTING.md) file in the [Pinax default community health file repo](https://github.com/pinax/.github/)
+* Current and historical release docs: [Pinax Wiki](https://github.com/pinax/pinax/wiki/)
+
+
 ## pinax-eventlog
 
 ### Overview
@@ -49,10 +61,10 @@ a job manager like `celery` or `pyres` so that the calls become asynchronous.
 
 #### Supported Django and Python versions
 
-Django \ Python | 2.7 | 3.4 | 3.5 | 3.6
---------------- | --- | --- | --- | ---
-1.11 |  *  |  *  |  *  |  *  
-2.0  |     |  *  |  *  |  *
+Django / Python | 3.6 | 3.7 | 3.8
+--------------- | --- | --- | ---
+2.2  |  *  |  *  |  *
+3.0  |  *  |  *  |  *
 
 
 ## Documentation
@@ -133,6 +145,15 @@ was just logged.
 
 
 ## Change Log
+
+### 4.0.0
+
+* Drop Django 1.11, 2.0, and 2.1, and Python 2,7, 3.4, and 3.5 support
+* Add Django 2.2 and 3.0, and Python 3.6, 3.7, and 3.8 support
+* Update packaging configs
+* Direct users to community resources
+
+### 3.0.0
 
 ### 2.0.3
 
@@ -262,23 +283,12 @@ This project was originally named `eventlog` and was created by the team at [Eld
 
 ## Contribute
 
-For an overview on how contributing to Pinax works read this [blog post](http://blog.pinaxproject.com/2016/02/26/recap-february-pinax-hangout/)
-and watch the included video, or read our [How to Contribute](http://pinaxproject.com/pinax/how_to_contribute/) section.
-For concrete contribution ideas, please see our
-[Ways to Contribute/What We Need Help With](http://pinaxproject.com/pinax/ways_to_contribute/) section.
-
-In case of any questions we recommend you join our [Pinax Slack team](http://slack.pinaxproject.com)
-and ping us there instead of creating an issue on GitHub. Creating issues on GitHub is of course
-also valid but we are usually able to help you faster if you ping us in Slack.
-
-We also highly recommend reading our blog post on [Open Source and Self-Care](http://blog.pinaxproject.com/2016/01/19/open-source-and-self-care/).
+[Contributing](https://github.com/pinax/.github/blob/master/CONTRIBUTING.md) information can be found in the [Pinax community health file repo](https://github.com/pinax/.github).
 
 
 ## Code of Conduct
 
-In order to foster a kind, inclusive, and harassment-free community, the Pinax Project
-has a [code of conduct](http://pinaxproject.com/pinax/code_of_conduct/).
-We ask you to treat everyone as a smart human programmer that shares an interest in Python, Django, and Pinax with you.
+In order to foster a kind, inclusive, and harassment-free community, the Pinax Project has a [Code of Conduct](https://github.com/pinax/.github/blob/master/CODE_OF_CONDUCT.md). We ask you to treat everyone as a smart human programmer that shares an interest in Python, Django, and Pinax with you.
 
 
 ## Connect with Pinax
