@@ -293,8 +293,7 @@ In order to foster a kind, inclusive, and harassment-free community, the Pinax P
 
 ## Connect with Pinax
 
-For updates and news regarding the Pinax Project, please follow us on Twitter [@pinaxproject](https://twitter.com/pinaxproject)
-and check out our [Pinax Project blog](http://blog.pinaxproject.com).
+For updates and news regarding the Pinax Project, please follow us on Twitter [@pinaxproject](https://twitter.com/pinaxproject) and check out our [Pinax Project blog](http://blog.pinaxproject.com).
 
 
 ## License
