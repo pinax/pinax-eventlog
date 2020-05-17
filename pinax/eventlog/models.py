@@ -25,7 +25,7 @@ class Log(models.Model):
     content_type = models.ForeignKey(ContentType, null=True, on_delete=models.SET_NULL)
     object_id = models.PositiveIntegerField(null=True)
     obj = GenericForeignKey("content_type", "object_id")
-    extra = JSONField(encoder=DjangoJSONEncoder)
+    extra = JSONField(DjangoJSONEncoder)
 
     @property
     def template_fragment_name(self):
