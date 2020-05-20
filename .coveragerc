@@ -1,7 +1,0 @@
-[run]
-source = pinax
-omit = pinax/eventlog/tests/*,pinax/eventlog/admin.py
-branch = 1
-
-[report]
-omit = pinax/eventlog/tests/*,pinax/eventlog/admin.py

@@ -1,5 +1,4 @@
 from django.conf import settings
-from django.contrib.postgres.fields import JSONField
 from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.core.serializers.json import DjangoJSONEncoder
@@ -7,6 +6,11 @@ from django.db import models
 from django.utils import timezone
 
 from .signals import event_logged
+
+if "sqlite" in settings.DATABASES["default"]["ENGINE"]:
+    from .fields import JSONField
+else:
+    from django.contrib.postgres.fields import JSONField
 
 
 class Log(models.Model):
@@ -21,11 +25,11 @@ class Log(models.Model):
     content_type = models.ForeignKey(ContentType, null=True, on_delete=models.SET_NULL)
     object_id = models.PositiveIntegerField(null=True)
     obj = GenericForeignKey("content_type", "object_id")
-    extra = JSONField(encoder=DjangoJSONEncoder)
+    extra = JSONField(DjangoJSONEncoder)
 
     @property
     def template_fragment_name(self):
-        return "pinax/eventlog/{}.html".format(self.action.lower())
+        return f"pinax/eventlog/{self.action.lower()}.html"
 
     class Meta:
         ordering = ["-timestamp"]

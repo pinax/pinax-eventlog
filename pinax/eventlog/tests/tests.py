@@ -73,7 +73,7 @@ class TestModels(TestCase):
         self.assertTrue(event.sent)
 
 
-class RequestMock(object):
+class RequestMock:
     def __init__(self, user):
         self.user = user
 

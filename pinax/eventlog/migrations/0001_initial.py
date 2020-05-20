@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('timestamp', models.DateTimeField(default=django.utils.timezone.now, db_index=True)),
                 ('action', models.CharField(max_length=50, db_index=True)),
                 ('extra', field),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL, null=True)),
+                ('user', models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=django.db.models.deletion.SET_NULL, null=True)),
             ],
             options={
                 'ordering': ['-timestamp'],
