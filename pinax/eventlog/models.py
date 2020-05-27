@@ -9,6 +9,8 @@ from .signals import event_logged
 
 if "sqlite" in settings.DATABASES["default"]["ENGINE"]:
     from .fields import JSONField
+elif "mysql" in settings.DATABASES["default"]["ENGINE"]:
+    from django_mysql.models import JSONField, Model
 else:
     from django.contrib.postgres.fields import JSONField
 
