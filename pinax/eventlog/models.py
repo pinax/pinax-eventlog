@@ -7,13 +7,6 @@ from django.utils import timezone
 
 from .signals import event_logged
 
-if "sqlite" in settings.DATABASES["default"]["ENGINE"]:
-    from .fields import JSONField
-elif "mysql" in settings.DATABASES["default"]["ENGINE"]:
-    from django_mysql.models import JSONField, Model
-else:
-    from django.contrib.postgres.fields import JSONField
-
 
 class Log(models.Model):
 
@@ -27,7 +20,7 @@ class Log(models.Model):
     content_type = models.ForeignKey(ContentType, null=True, on_delete=models.SET_NULL)
     object_id = models.PositiveIntegerField(null=True)
     obj = GenericForeignKey("content_type", "object_id")
-    extra = JSONField(DjangoJSONEncoder)
+    extra = models.JSONField(encoder=DjangoJSONEncoder)
 
     @property
     def template_fragment_name(self):
