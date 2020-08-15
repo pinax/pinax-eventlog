@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "4.0.1"
+VERSION = "5.0.0"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
@@ -43,9 +43,7 @@ Supported Django and Python Versions
 +-----------------+-----+-----+-----+
 | Django / Python | 3.6 | 3.7 | 3.8 |
 +=================+=====+=====+=====+
-|  2.2            |  *  |  *  |  *  |
-+-----------------+-----+-----+-----+
-|  3.0            |  *  |  *  |  *  |
+|  3.1            |  *  |  *  |  *  |
 +-----------------+-----+-----+-----+
 """
 
@@ -67,8 +65,7 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Django",
-        "Framework :: Django :: 2.2",
-        "Framework :: Django :: 3.0",
+        "Framework :: Django :: 3.1",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
@@ -80,8 +77,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=[
-        "django>=2.2",
-        "psycopg2-binary>=2.8.4"
+        "django>=3.1",
     ],
     tests_require=[
     ],
