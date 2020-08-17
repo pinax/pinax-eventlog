@@ -5,6 +5,7 @@ from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.utils import timezone
 
+from .compat import JSONField
 from .signals import event_logged
 
 
@@ -20,7 +21,7 @@ class Log(models.Model):
     content_type = models.ForeignKey(ContentType, null=True, on_delete=models.SET_NULL, blank=True)
     object_id = models.PositiveIntegerField(null=True, blank=True)
     obj = GenericForeignKey("content_type", "object_id")
-    extra = models.JSONField(encoder=DjangoJSONEncoder, blank=True)
+    extra = JSONField(encoder=DjangoJSONEncoder, blank=True)
 
     @property
     def template_fragment_name(self):

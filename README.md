@@ -21,7 +21,8 @@
 * [Overview](#overview)
   * [Supported Django and Python Versions](#supported-django-and-python-versions)
 * [Documentation](#documentation)
-  * [Installation](#installation)
+  * [Installation in Django >=3.1](#installation-in-django-31)
+  * [Installation in Django <3.1](#installation-in-django-31-1)  
   * [Usage](#usage)
   * [Signals](#signals)
 * [Change Log](#change-log)
@@ -63,13 +64,15 @@ a job manager like `celery` or `pyres` so that the calls become asynchronous.
 
 Django / Python | 3.6 | 3.7 | 3.8
 --------------- | --- | --- | ---
-2.2  |  *  |  *  |  *
-3.0  |  *  |  *  |  *
+2.2*  |  *  |  *  |  *
+3.0*  |  *  |  *  |  *
+3.1  |  *  |  *  |  *
 
+_*see Installation in Django < 3.1 below*_
 
 ## Documentation
 
-### Installation
+### Installation in Django >=3.1
 
 To install pinax-eventlog:
 
@@ -82,6 +85,35 @@ Add `pinax.eventlog` to your `INSTALLED_APPS` setting:
 ```python
     INSTALLED_APPS = [
         # other apps
+        "pinax.eventlog",
+    ]
+```
+
+Run the app's migrations:
+
+```shell
+    $ python manage.py migrate eventlog
+```
+
+### Installation in Django <3.1
+
+Django 3.1 introduced a JSON model field on all supported backends:
+
+https://docs.djangoproject.com/en/3.1/releases/3.1/#jsonfield-for-all-supported-database-backends
+
+To use `pinax-eventlog` on sites running Django 2.2 and 3.0, you'll want to install the package with the
+`django-lts` extra:
+
+```shell
+    $ pip install pinax-eventlog[django-lts]
+```
+
+Add `pinax.eventlog` and `django_jsonfield_backport` to your `INSTALLED_APPS` setting:
+
+```python
+    INSTALLED_APPS = [
+        # other apps
+        "django_jsonfield_backport,
         "pinax.eventlog",
     ]
 ```
@@ -145,6 +177,15 @@ was just logged.
 
 
 ## Change Log
+
+### 5.1
+
+* Restore Django 2.2 and 3.0 support via [`django-jsonfield-backport`](https://github.com/laymonage/django-jsonfield-backport)
+
+### 5.0.0
+
+* Switch to Django 3.1's JSONField
+* Reset migrations _(see discussion in [#33](https://github.com/pinax/pinax-eventlog/issues/32#issuecomment-674414709))_
 
 ### 4.0.1
 
