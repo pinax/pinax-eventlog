@@ -21,7 +21,8 @@
 * [Overview](#overview)
   * [Supported Django and Python Versions](#supported-django-and-python-versions)
 * [Documentation](#documentation)
-  * [Installation](#installation)
+  * [Installation in Django >=3.1](#installation-in-django-31)
+  * [Installation in Django <3.1](#installation-in-django-31-1)  
   * [Usage](#usage)
   * [Signals](#signals)
 * [Change Log](#change-log)
@@ -178,6 +179,7 @@ was just logged.
 ## Change Log
 
 ### 5.1
+
 * Restore Django 2.2 and 3.0 support via [`django-jsonfield-backport`](https://github.com/laymonage/django-jsonfield-backport)
 
 ### 5.0.0
