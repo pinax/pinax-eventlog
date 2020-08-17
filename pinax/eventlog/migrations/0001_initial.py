@@ -6,6 +6,8 @@ from django.db import migrations, models
 import django.db.models.deletion
 import django.utils.timezone
 
+from ..compat import JSONField
+
 
 class Migration(migrations.Migration):
 
@@ -24,7 +26,7 @@ class Migration(migrations.Migration):
                 ('timestamp', models.DateTimeField(db_index=True, default=django.utils.timezone.now)),
                 ('action', models.CharField(db_index=True, max_length=50)),
                 ('object_id', models.PositiveIntegerField(blank=True, null=True)),
-                ('extra', models.JSONField(blank=True, encoder=django.core.serializers.json.DjangoJSONEncoder)),
+                ('extra', JSONField(blank=True, encoder=django.core.serializers.json.DjangoJSONEncoder)),
                 ('content_type', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, to='contenttypes.contenttype')),
                 ('user', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL)),
             ],

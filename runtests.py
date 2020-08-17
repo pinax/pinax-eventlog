@@ -26,6 +26,9 @@ DEFAULT_SETTINGS = dict(
 
 
 def runtests(*test_args):
+    if django.VERSION < (3, 1):
+        DEFAULT_SETTINGS["INSTALLED_APPS"].append("django_jsonfield_backport")
+
     if not settings.configured:
         settings.configure(**DEFAULT_SETTINGS)
 

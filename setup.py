@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "5.0.0"
+VERSION = "5.1.0"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
@@ -43,6 +43,8 @@ Supported Django and Python Versions
 +-----------------+-----+-----+-----+
 | Django / Python | 3.6 | 3.7 | 3.8 |
 +=================+=====+=====+=====+
+|  2.2            |  *  |  *  |  *  |
+|  3.0            |  *  |  *  |  *  |
 |  3.1            |  *  |  *  |  *  |
 +-----------------+-----+-----+-----+
 """
@@ -77,10 +79,15 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=[
-        "django>=3.1",
+        "django>=2.2",
     ],
     tests_require=[
     ],
+    extras_require={
+        "django-lts": [
+            "django-jsonfield-backport>=1.0.0<2",
+        ]
+    },
     test_suite="runtests.runtests",
     zip_safe=False
 )
