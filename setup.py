@@ -85,7 +85,7 @@ setup(
     ],
     extras_require={
         "django-lts": [
-            "django-jsonfield-backport>=1.0.0<2",
+            "django-jsonfield-backport>=1.0.0,<2",
         ]
     },
     test_suite="runtests.runtests",
