@@ -178,6 +178,10 @@ was just logged.
 
 ## Change Log
 
+### 5.1.1
+
+* Remove deprecated `providing_args` argument ([Deprecated in Django 3.1](https://docs.djangoproject.com/en/4.0/releases/3.1/#id2))
+
 ### 5.1.0
 
 * Restore Django 2.2 and 3.0 support via [`django-jsonfield-backport`](https://github.com/laymonage/django-jsonfield-backport)
