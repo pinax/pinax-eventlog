@@ -11,6 +11,7 @@ from .signals import event_logged
 
 class Log(models.Model):
 
+    id = models.BigAutoField(primary_key=True)
     user = models.ForeignKey(
         getattr(settings, "AUTH_USER_MODEL", "auth.User"),
         null=True,
