@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "5.1.1"
+VERSION = "6.0.0-rc1"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
@@ -40,13 +40,13 @@ as well as business intelligence data about activity that occurs in your site.
 Supported Django and Python Versions
 ------------------------------------
 
-+-----------------+-----+-----+-----+
-| Django / Python | 3.6 | 3.7 | 3.8 |
-+=================+=====+=====+=====+
-|  2.2            |  *  |  *  |  *  |
-|  3.0            |  *  |  *  |  *  |
-|  3.1            |  *  |  *  |  *  |
-+-----------------+-----+-----+-----+
++-----------------+-----+------+------+------+------+
+| Django / Python | 3.9 | 3.10 | 3.11 | 3.12 | 3.13 |
++=================+=====+======+======+======+======+
+|  4.2            |  *  |  *   |  *   |  *   |  *   |
+|  5.1            |     |  *   |  *   |  *   |  *   |
+|  5.2            |     |  *   |  *   |  *   |  *   |
++-----------------+-----+------+------+------+------+
 """
 
 setup(
@@ -67,27 +67,28 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Environment :: Web Environment",
         "Framework :: Django",
-        "Framework :: Django :: 3.1",
+        "Framework :: Django :: 4.2",
+        "Framework :: Django :: 5.1",
+        "Framework :: Django :: 5.2",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=[
-        "django>=2.2",
+        "django>=4.2",
     ],
+    python_requires=">=3.9",
     tests_require=[
     ],
-    extras_require={
-        "django-lts": [
-            "django-jsonfield-backport>=1.0.0,<2",
-        ]
-    },
+    extras_require={},
     test_suite="runtests.runtests",
     zip_safe=False
 )

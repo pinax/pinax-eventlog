@@ -4,7 +4,7 @@
 
 [![](https://img.shields.io/pypi/v/pinax-eventlog.svg)](https://pypi.python.org/pypi/pinax-eventlog/)
 
-[![CircleCi](https://img.shields.io/circleci/project/github/pinax/pinax-eventlog.svg)](https://circleci.com/gh/pinax/pinax-eventlog/)
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/pinax/pinax-eventlog/test.yml?branch=master)](https://github.com/pinax/pinax-eventlog/actions)
 [![Codecov](https://img.shields.io/codecov/c/github/pinax/pinax-eventlog.svg)](https://codecov.io/gh/pinax/pinax-eventlog/)
 [![](https://img.shields.io/github/contributors/pinax/pinax-eventlog.svg)](https://github.com/pinax/pinax-eventlog/graphs/contributors)
 [![](https://img.shields.io/github/issues-pr/pinax/pinax-eventlog.svg)](https://github.com/pinax/pinax-eventlog/pulls)
@@ -62,13 +62,11 @@ a job manager like `celery` or `pyres` so that the calls become asynchronous.
 
 #### Supported Django and Python versions
 
-Django / Python | 3.6 | 3.7 | 3.8
---------------- | --- | --- | ---
-2.2*  |  *  |  *  |  *
-3.0*  |  *  |  *  |  *
-3.1  |  *  |  *  |  *
-
-_*see Installation in Django < 3.1 below*_
+Django / Python | 3.9 | 3.10 | 3.11 | 3.12 | 3.13
+--------------- | --- | ---- | ---- | ---- | ----
+4.2  |  *  |  *  |  *  |  *  |  *
+5.1  |     |  *  |  *  |  *  |  *
+5.2  |     |  *  |  *  |  *  |  *
 
 ## Documentation
 
@@ -177,6 +175,13 @@ was just logged.
 
 
 ## Change Log
+
+### 6.0.0-rc1
+
+* Migrate from CircleCI to GitHub Actions CI
+* Update test matrix to support Python 3.9-3.13 and Django 4.2-5.2
+* Remove support for Python 3.6-3.8 and Django 2.2-3.1
+* Add migration to alter Log model ID field to BigAutoField
 
 ### 5.1.1
 
