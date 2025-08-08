@@ -176,6 +176,13 @@ was just logged.
 
 ## Change Log
 
+### 6.0.0
+
+* Migrate from CircleCI to GitHub Actions CI
+* Update test matrix to support Python 3.9-3.13 and Django 4.2-5.2
+* Remove support for Python 3.6-3.8 and Django 2.2-3.1
+* Add migration to alter Log model ID field to BigAutoField
+
 ### 6.0.0rc1
 
 * Migrate from CircleCI to GitHub Actions CI

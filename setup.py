@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 
-VERSION = "6.0.0rc1"
+VERSION = "6.0.0"
 LONG_DESCRIPTION = """
 .. image:: http://pinaxproject.com/pinax-design/patches/pinax-eventlog.svg
     :target: https://pypi.python.org/pypi/pinax-eventlog/
