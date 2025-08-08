@@ -14,8 +14,8 @@ Pinax EventLog
 
 \
 
-.. image:: https://img.shields.io/circleci/project/github/pinax/pinax-eventlog.svg
-    :target: https://circleci.com/gh/pinax/pinax-eventlog
+.. image:: https://img.shields.io/github/actions/workflow/status/pinax/pinax-eventlog/test.yml?branch=master
+    :target: https://github.com/pinax/pinax-eventlog/actions
 .. image:: https://img.shields.io/codecov/c/github/pinax/pinax-eventlog.svg
     :target: https://codecov.io/gh/pinax/pinax-eventlog
 .. image:: https://img.shields.io/github/contributors/pinax/pinax-eventlog.svg
