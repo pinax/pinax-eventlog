@@ -1,3 +1,6 @@
-import pkg_resources
+from importlib.metadata import version
 
-__version__ = pkg_resources.get_distribution("pinax-eventlog").version
+try:
+    __version__ = version("pinax-eventlog")
+except Exception:
+    __version__ = "6.0.0rc1"

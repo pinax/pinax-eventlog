@@ -3,14 +3,15 @@ from django.contrib.contenttypes.fields import GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
+from django.db.models import JSONField
 from django.utils import timezone
 
-from .compat import JSONField
 from .signals import event_logged
 
 
 class Log(models.Model):
 
+    id = models.BigAutoField(primary_key=True)
     user = models.ForeignKey(
         getattr(settings, "AUTH_USER_MODEL", "auth.User"),
         null=True,
