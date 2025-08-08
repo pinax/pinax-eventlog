@@ -107,5 +107,3 @@ class TestMixins(TestCase):
         mixin.request = RequestMock(user)
         mixin.log_action()
         self.assertEqual(Log.objects.all()[0].action, "CREATE_USER")
-
-
