@@ -176,7 +176,7 @@ was just logged.
 
 ## Change Log
 
-### 6.0.0-rc1
+### 6.0.0rc1
 
 * Migrate from CircleCI to GitHub Actions CI
 * Update test matrix to support Python 3.9-3.13 and Django 4.2-5.2
