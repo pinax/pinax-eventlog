@@ -1,13 +1,11 @@
 from datetime import timedelta
 
-import django
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AnonymousUser
 from django.contrib.contenttypes.models import ContentType
 from django.test import TestCase
 from django.utils import timezone
 
-from ..compat import JSONField
 from ..mixins import EventLogMixin
 from ..models import Log, log
 from ..signals import event_logged
@@ -111,13 +109,3 @@ class TestMixins(TestCase):
         self.assertEqual(Log.objects.all()[0].action, "CREATE_USER")
 
 
-class TestCompat(TestCase):  # noqa
-    def test_jsonfield(self):
-        if django.VERSION < (3, 1):
-            from django_jsonfield_backport.models import \
-                JSONField as BackportJSONField  # noqa
-            assert JSONField == BackportJSONField
-        if django.VERSION >= (3, 1):
-            from django.db.models import \
-                JSONField as SupportedJSONField  # noqa
-            assert JSONField == SupportedJSONField

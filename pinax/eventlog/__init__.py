@@ -1,9 +1,6 @@
-try:
-    from importlib.metadata import version
-except ImportError:
-    from importlib_metadata import version
+from importlib.metadata import version
 
 try:
     __version__ = version("pinax-eventlog")
 except Exception:
-    __version__ = "5.1.1"
+    __version__ = "6.0.0-rc1"

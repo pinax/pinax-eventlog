@@ -5,7 +5,7 @@ from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models
 from django.utils import timezone
 
-from .compat import JSONField
+from django.db.models import JSONField
 from .signals import event_logged
 
 

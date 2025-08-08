@@ -6,7 +6,7 @@ from django.db import migrations, models
 import django.db.models.deletion
 import django.utils.timezone
 
-from ..compat import JSONField
+from django.db.models import JSONField
 
 
 class Migration(migrations.Migration):
