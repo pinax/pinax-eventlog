@@ -26,6 +26,10 @@ lint:
 test-env:
 	uvx -p 3.12 tox -e $(ENV)
 
+# Create Django migrations
+makemigrations:
+	uv run -p 3.10 --with=Django==5.2 python makemigrations.py
+
 # Clean up build artifacts and caches
 clean:
 	rm -rf .tox/
@@ -43,7 +47,8 @@ help:
 	@echo "  test-all  - Run all tests across all environments"
 	@echo "  lint      - Run code quality checks only"
 	@echo "  test-env  - Test specific environment (ENV=py312-dj52)"
+	@echo "  makemigrations - Create Django migrations"
 	@echo "  clean     - Remove build artifacts and caches"
 	@echo "  help      - Show this help message"
 
-.PHONY: all init test test-all lint test-env clean help
+.PHONY: all init test test-all lint test-env makemigrations clean help
